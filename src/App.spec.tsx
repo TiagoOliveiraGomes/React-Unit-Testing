@@ -1,4 +1,4 @@
-import { render, fireEvent } from '@testing-library/react'
+import { render } from '@testing-library/react'
 import '@testing-library/jest-dom';
 import userEvent from '@testing-library/user-event'
 import App from './App'
@@ -17,7 +17,7 @@ describe('App Component', () => {
 
         
         debug()
-        userEvent.dblClick(addButton)
+        userEvent.click(addButton)
         debug()
 
         expect(getByText('New')).toBeInTheDocument()

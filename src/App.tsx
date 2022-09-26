@@ -14,7 +14,9 @@ function App() {
       {list.map(item => {
         return (
           <li key={item}>
-            {item}
+            <h1>
+              {item}
+            </h1>
           </li>
         )
       })}
