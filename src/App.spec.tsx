@@ -1,25 +1,8 @@
 import { render } from '@testing-library/react'
-import '@testing-library/jest-dom';
-import userEvent from '@testing-library/user-event'
 import App from './App'
 
-describe('App Component', () => {
-    it('should render list items', () => {
-        const { getByText } = render(<App />)
-        expect(getByText('José')).toBeInTheDocument()
-        expect(getByText('Marcos')).toBeInTheDocument()
-        expect(getByText('Mike')).toBeInTheDocument()
-    })
+test('sum', () => {
+    const { getByText } = render(<App />)
     
-    it('should be able to add new item to the list', () => {
-        const { getByText, debug } = render(<App />)
-        const addButton = getByText('Adicionar')
-
-        
-        debug()
-        userEvent.click(addButton)
-        debug()
-
-        expect(getByText('New')).toBeInTheDocument()
-    })
+    expect(getByText('Hello World')).toHaveAttribute('class', 'App')
 })
